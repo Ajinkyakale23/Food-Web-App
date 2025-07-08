@@ -1,0 +1,106 @@
+/* Base style for the login popup overlay */
+.login-popup {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: #00000090; /* Semi-transparent background */
+    display: grid;
+    justify-items: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+}
+
+/* Style for the popup container */
+.login-popup-container {
+    width: max(23vw, 330px);
+    color: #808080;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: fadeIn 0.5s ease-in; /* Corrected animation name */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow for floating effect */
+}
+
+/* Title section (close button and heading) */
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+}
+
+.login-popup-title img {
+    width: 16px;
+    cursor: pointer;
+}
+
+/* Input container styling */
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-popup-inputs input {
+    outline: none;
+    border: 1px solid #c9c9c9;
+    padding: 10px;
+    border-radius: 4px;
+    transition: border-color 0.3s ease; /* Smooth transition on focus */
+}
+
+/* Input focus styling */
+.login-popup-inputs input:focus {
+    border-color: tomato; /* Highlight input field when focused */
+}
+
+/* Button styling */
+.login-popup-container button {
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: tomato;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Button hover effect */
+.login-popup-container button:hover {
+    background-color: #d96b5e; /* Slightly lighter tomato color */
+}
+
+/* Checkbox and terms condition text styling */
+.login-pop-condition {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    margin-top: -15px;
+}
+
+/* Adjust checkbox appearance */
+.login-pop-condition input {
+    margin-top: 5px;
+}
+
+/* Link styling within the popup */
+.login-popup p span {
+    color: tomato;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
